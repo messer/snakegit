@@ -1,7 +1,7 @@
 FROM python:3-slim AS builder
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update
-RUN apt-get install -y git curl ninja-build
+RUN apt-get install -y git curl ninja-build rsync
 RUN apt-get clean
 RUN useradd -m snake
 USER snake
